@@ -122,7 +122,7 @@ public:
         vector<int> space;
         
         for(auto c : operations){
-            if(is_digit(ㅊ)) space.push_back(atoi(c.c_str()));
+            if(is_digit(c)) space.push_back(atoi(c.c_str()));
             else if (c == "C") space.pop_back();
             else if (c == "D") space.push_back( space.back() * 2 );
             else if (c == "+") space.push_back( space.back() + space[space.size()-2] );
