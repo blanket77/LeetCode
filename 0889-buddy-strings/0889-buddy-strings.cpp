@@ -14,7 +14,7 @@ public:
         int first_idx = -1;
         int second_idx = -1;
 
-        for(int i =0 ; i < s.length() ; i++){
+        for(int i = 0 ; i < s.length() ; i++){
             // Compares each character in two string and if there are more than 2 differences, it is false. 
             if(s[i] != goal[i]) {
                 dif++;
@@ -23,7 +23,8 @@ public:
                 else second_idx = i; 
             }
         }
-        
+        if(dif != 2) return false;
+
         // Compares each character in two string, if there are two difference and When Change two index, There are same, then it is true.
         char tmp;
         tmp = s[first_idx]; s[first_idx] = s[second_idx];  s[second_idx] = tmp; 
